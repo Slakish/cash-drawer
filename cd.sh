@@ -13,13 +13,13 @@ wget -q http://sven-ola.commando.de/013-cashdrawer.sh
 chmod +x *.sh
 
 # Schritt 5: Skript mit manuellem Modus ausführen und Enter drücken
-/usr/local/sbin/013-cashdrawer.sh manual <<< $'\n'
+echo | /usr/local/sbin/013-cashdrawer.sh manual
 
 # Warte kurz, um sicherzustellen, dass das Skript geladen wurde
 sleep 1
 
 # Schritt 6: Automatisch 'o' (für Öffnen) drücken
-echo -n "o" | /usr/local/sbin/013-cashdrawer.sh manual
+echo "o" | /usr/local/sbin/013-cashdrawer.sh manual
 
 # Schritt 7: Beenden des Skripts
 echo "Das Skript wurde automatisch ausgeführt."
